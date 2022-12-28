@@ -2,7 +2,7 @@ import React, { Component } from "react";
 
 export default class NewsItem extends Component {
   API_KEY = "16a4e1d512a7489caf4110e00dc64625";
-  
+
   render() {
     let {title,description,imageUrl,newsUrl}= this.props;
     return (
@@ -10,11 +10,11 @@ export default class NewsItem extends Component {
         <div className="card" style={{ width: "18rem" }}>
           <img src={imageUrl} className="card-img-top" alt="..." />
           <div className="card-body">
-            <h5 className="card-title">{title}</h5>
-            <p className="card-text">
-                 {description}
+            <h5 className="card-title">{title}...</h5>
+            <p className="card-text"  >
+                 {description}...
             </p>
-            <a href={`/newsdetail/:${newsUrl}`} className="btn btn-sm btn-primary">
+            <a href={newsUrl} target="_blank" className="btn btn-sm btn-primary">
               Read More
             </a>
           </div>
