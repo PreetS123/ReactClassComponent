@@ -8,13 +8,13 @@ export default class NewsItem extends Component {
     return (
       <div>
         <div className="card" style={{ width: "18rem" }}>
-          <img src={imageUrl} className="card-img-top" alt="..." />
+          <img src={!imageUrl?"https://www.washingtonpost.com/wp-apps/imrs.php?src=https://d1i4t8bqe7zgj6.cloudfront.net/12-23-2022/t_c45f8e2d3b104cce8812c4039c987d4a_name_1___1920x1080___30p_00_10_17_12_Still019.jpg&w=1440":imageUrl} className="card-img-top" alt="..." />
           <div className="card-body">
             <h5 className="card-title">{title}...</h5>
             <p className="card-text"  >
                  {description}...
             </p>
-            <p className='card-text' ><small className='text-muted'>By {author} on {date}</small></p>
+            <p className='card-text' ><small className='text-muted'>By {!author?"Unknown":author} on {new Date(date).toGMTString()}</small></p>
             <a href={newsUrl} target="_blank" className="btn btn-sm btn-primary">
               Read More
             </a>
