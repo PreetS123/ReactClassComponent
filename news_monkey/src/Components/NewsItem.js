@@ -4,7 +4,7 @@ export default class NewsItem extends Component {
   API_KEY = "16a4e1d512a7489caf4110e00dc64625";
 
   render() {
-    let {title,description,imageUrl,newsUrl}= this.props;
+    let {title,description,imageUrl,newsUrl,author,date}= this.props;
     return (
       <div>
         <div className="card" style={{ width: "18rem" }}>
@@ -14,6 +14,7 @@ export default class NewsItem extends Component {
             <p className="card-text"  >
                  {description}...
             </p>
+            <p className='card-text' ><small className='text-muted'>By {author} on {date}</small></p>
             <a href={newsUrl} target="_blank" className="btn btn-sm btn-primary">
               Read More
             </a>
