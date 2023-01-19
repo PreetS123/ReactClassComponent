@@ -1,4 +1,4 @@
-const projectData = [
+export const projectData = [
     {
         TaskID: 1,
         TaskName: 'Project Initiation',

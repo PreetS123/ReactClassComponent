@@ -1,15 +1,18 @@
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-// import { GanntCharts } from './components/GanntCharts';
+import { GanntCharts } from './Pages/GanntCharts';
 import {Routes,Route} from 'react-router-dom';
-import { BarGraph } from './components/BarGraph';
+import { BarGraph } from './Pages/BarGraph';
+import { LineGraph } from './Pages/LineGraph';
 
 function App() {
   return (
     <div className="App">
-       Hello world
+       
       <Routes>
         <Route path='/' element={<BarGraph/>}/>
+        <Route path='/gant' element={<GanntCharts/>}/>
+        <Route path='/line' element={<LineGraph/>}/>
       </Routes>
     </div>
   );
